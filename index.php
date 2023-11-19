@@ -14,7 +14,7 @@
         <ul>    
             <li><h2>THƯ VIỆN ONLINE</h2></li>
             <div id = 'search'>
-                <form action="timsach.php" method="get">
+                <form action="pages/searchbooks.php" method="get">
                     <input type='text' name = "search" id = 'text_search' placeholder='Tìm kiếm...' required>
                     <input type="submit" id= 'btn_search' value = 'Tìm'>
                 </form>
