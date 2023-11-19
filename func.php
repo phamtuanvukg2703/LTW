@@ -27,4 +27,16 @@
         $sql = "select * from sach where theLoai LIKE '$theloai'";
         return mysqli_query($conn, $sql);
     }
+// lấy password thôi nèo
+    function getpassuser_sdt($conn, $dt){
+        $sql = "SELECT * FROM bandoc WHERE dt = '$dt' or email ='$dt'";
+        $result = null;
+        if($sql_result=mysqli_query($conn,$sql)){
+            if($row = mysqli_fetch_array($sql_result)) {
+                $result = $row;
+            }
+        }
+        mysqli_free_result($sql_result);
+        return $result;
+    }
 ?>
