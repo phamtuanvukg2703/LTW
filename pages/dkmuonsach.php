@@ -7,20 +7,20 @@
         <input type="date" id="ngaymuon" name="ngaymuon" required>
         <label for="ngaytra">Ngày Trả:</label>
         <input type="date" id="ngaytra" name="ngaytra" required>
-        <button type="submit" class ="bt_lg">Mượn Sách</button>
+        <button type="submit" class="btn_dk" name ="btn_dkms">Mượn Sách</button>
     </form>
 </div>
 <?php
     require_once('/xampp/htdocs/LTW/func.php');
     $conn = connectDB();
-    if (isset($_POST['bt_lg'])){
+    if (isset($_POST['btn_dkms'])){
         $masach = $_POST['maSach'];
         $ngaymuon =  $_POST['ngaymuon'];
         $ngaytra = $_POST['ngaytra'];
         $sql = "INSERT INTO muon(maSach,ngayMuon,ngayTradukien) VALUES ('$masach','$ngaymuon', '$ngaytra')";
         if ($conn->query($sql) === TRUE){
                 echo '<script type="text/javascript">';
-                echo 'alert("Mượn thành công!");';
+                echo 'alert("Đẫ gửi yêu cầu");';
                 echo 'window.location.href = "index.php";'; 
                 echo '</script>';
         } else {
