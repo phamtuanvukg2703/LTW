@@ -7,9 +7,15 @@ body{
     font-family: sans-serif;
     background-color: #fff1f2;
 }
+#header #login_left {
+    color: white;
+    margin-left: auto;
+}
+#search{
+    margin: 0 270px;
+}
 #header  > ul{
     display: flex;
-    justify-content: space-between;
     padding: 20px;
     background:#006241;
     position: sticky;

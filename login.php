@@ -1,26 +1,23 @@
-<?php
-    require_once('/xampp/htdocs/LTW/conn.php');
-    require_once('/xampp/htdocs/LTW/func.php');
-    if(isset($_POST['username'])){
-        session_start();
-        $dt = $_POST['username'];
-        $Password = $_POST['password'];
-        $result = getpassuser_sdt($conn, $dt);
-        mysqli_close($conn);
-        if(password_verify($Password, $result['matKhau'])){
-            if(session_id() ===''){
-                session_start();
-            }
-            $_SESSION['username'] =$_POST['username'];
-            echo '<script type="text/javascript">';
-            echo 'alert("Login thành công!");';
-            echo '</script>';
-            header("location:index.php?page=allbooks");
-            exit();
-        }else{
-            echo '<script type="text/javascript">';
-            echo 'alert("Đăng nhập không thành công");';
-            echo '</script>';
+<?php 
+    if(session_id() === '' )
+      session_start();
+    if (isset($_GET["logout"]))
+      unset($_SESSION["username"]);
+    if (isset($_POST["username"])) {
+      session_start();
+      require_once('/xampp/htdocs/LTW/conn.php');
+      require_once('/xampp/htdocs/LTW/func.php');
+      $username = $_POST['username'];
+      $password = $_POST['password'];
+      $result = getpassuser_sdt($conn,$username);
+      mysqli_close($conn);
+      if(isset($result) && password_verify($password, $result['matKhau'])) {
+          $_SESSION["username"] = $_POST["username"];
+          $_SESSION["tenBandoc"] = $result["tenBandoc"];
+          header("Location: index.php?page=dssach");
+          exit();
+        } else {
+          echo "sai mat khau";
         }
     }
 ?>

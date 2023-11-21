@@ -13,13 +13,25 @@
     <div id = 'header'>
         <ul>    
             <li><h2>THƯ VIỆN ONLINE</h2></li>
-            <div id = 'search'>
+            <li id = 'search'>
                 <form action="pages/searchbooks.php" method="get">
                     <input type='text' name = "search" id = 'text_search' placeholder='Tìm kiếm...' required>
                     <input type="submit" id= 'btn_search' value = 'Tìm'>
                 </form>
-            </div>
-            <li><a href="login.php">đăng nhập</a></li>
+            </li>
+            <?php
+            session_start(); // Bắt buộc khi sử dụng session
+            // Kiểm tra xem người dùng đã đăng nhập chưa
+            if (isset($_SESSION['username'])) {
+                // Người dùng đã đăng nhập
+                echo '<li id ="login_left"><p>Xin chào ' . $_SESSION['tenBandoc'] . '<p></li>';
+                echo '<li><a href="login.php?logout=1">Đăng xuất</a></li>';
+            } else {
+                // Người dùng chưa đăng nhập, hiển thị thẻ a dẫn đến form đăng nhập
+                echo '<li><a href="login.php">Đăng nhập</a></li>';
+            }
+            ?>
+
         </ul>
     </div>
     <div class = 'container'>

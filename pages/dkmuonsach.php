@@ -21,7 +21,7 @@
         if ($conn->query($sql) === TRUE){
                 echo '<script type="text/javascript">';
                 echo 'alert("Đẫ gửi yêu cầu");';
-                echo 'window.location.href = "index.php";'; 
+                echo 'window.location.href = "index.php?page=dkmuonsach";'; 
                 echo '</script>';
         } else {
             echo "Lỗi: " . $sql . "<br>" . $conn->error;
