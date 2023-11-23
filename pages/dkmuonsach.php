@@ -24,7 +24,7 @@
         $result = mysqli_query($conn, $check);
         if(mysqli_num_rows($result)){
             echo '<script type="text/javascript">';
-            echo 'alert("Sách này đã có người mượn");';
+            echo 'alert("Lỗi mượn");';
             echo 'window.location.href = "index.php?page=dkmuonsach";'; 
             echo '</script>';
         }
