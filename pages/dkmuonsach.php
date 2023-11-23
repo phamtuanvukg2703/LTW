@@ -4,7 +4,7 @@
         <input type="hidden" name="maBandoc" value="<?php if(isset($_SESSION['maBandoc'])) {echo $_SESSION['maBandoc'];}?>">
         <label for="maSach">Mã Sách:</label>
         <input type="text" id="maSach" name="maSach" placeholder="Nhập mã sách" required>
-        <label for="ngayMuon">Hạn nhận sách:</label>
+        <label for="hanNhansach">Hạn nhận sách:</label>
         <input type="date" id="hanNhansach" name="hanNhansach" required>
         <button type="submit" class="btn_dk" name ="btn_dkms">Mượn Sách</button>
     </form>
@@ -19,7 +19,7 @@
     if (isset($_POST['btn_dkms'])){
         $mabandoc = $_SESSION['maBandoc'];
         $masach = $_POST['maSach'];
-        $hannhansach = $_POST['hanNhansach'];
+        $hanNhansach = $_POST['hanNhansach'];
         $check = "SELECT maSach FROM sach WHERE maSach IN (SELECT DISTINCT maSach FROM yeucau WHERE maSach = '$masach' AND hanNhansach >= CURRENT_DATE() AND trangThai = true) OR maSach IN (SELECT DISTINCT maSach FROM muon WHERE maSach = '$masach' AND ngayDatra IS NULL);";
         $result = mysqli_query($conn, $check);
         if(mysqli_num_rows($result)){

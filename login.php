@@ -37,12 +37,12 @@
         <form method="post">
             <h2>Đăng nhập</h2>
             <div class ="username">
-                <label for="">Tên đăng nhập</label>
-                <input type="text" name="username" class ="username" placeholder="Nhập số điện thoại/email" required>
+                <label for="username">Tên đăng nhập</label>
+                <input type="text" name="username" class ="username"  id = "username"placeholder="Nhập số điện thoại/email" required>
             </div>
             <div class = "password">
-                <label for="">Mật khẩu</label>
-                <input type="password" name="password" class ="password" placeholder="Nhập mật khẩu" required>
+                <label for="password">Mật khẩu</label>
+                <input type="password" name="password" class ="password" id = "password"placeholder="Nhập mật khẩu" required>
             </div>
             <div class ="btn">
                 <button type="submit" class ="btn_dn">Đăng nhập</button>
