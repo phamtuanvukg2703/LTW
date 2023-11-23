@@ -26,6 +26,7 @@ $r = mysqli_fetch_array($s);
         <div class = 'img'><img src="../img/"></div>
         <div class= 'info'>
             <div class = 'name'><h2><?php echo $r['tenSach'] ?></h2></div>
+            <div class = 'id'>Mã sách: <?php echo $r['maSach'] ?> </div>
             <div class = 'cate'>Thể loại: <?php echo $r['theLoai'] ?></div>
             <div class = 'author'>Tác giả: <?php echo $r['tacGia'] ?></div>
             <div class ='publishing_year'>Năm xuất bản:<?php echo $r['namXuatban'] ?></div>

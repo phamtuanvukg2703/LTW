@@ -16,7 +16,8 @@
         </ul>
     </div>
 <?php
-require_once('/xampp/htdocs/LTW/conn.php');
+require_once('/xampp/htdocs/LTW/func.php');
+$conn = connectDB();
 
 if(isset($_GET['search'])) {
     $search = $_GET['search'];

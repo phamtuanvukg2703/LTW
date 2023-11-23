@@ -22,14 +22,8 @@
     </form>
 
     <?php
-    // Database connection
-    $conn = new mysqli("localhost", "root", "", "qlthuvien");
-
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-
+    require_once('/xampp/htdocs/LTW/func.php');
+    $conn = connectDB();
     // Handle search
     if (isset($_POST['search'])) {
         $selectedGenre = $_POST['theloai'];

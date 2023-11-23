@@ -7,7 +7,7 @@ body{
     font-family: sans-serif;
     background-color: #fff1f2;
 }
-#header #login_left {
+#header .login_left {
     color: white;
     margin-left: auto;
 }

@@ -1,11 +1,12 @@
 <?php 
+    require_once('/xampp/htdocs/LTW/func.php');
+    $conn = connectDB();
     if(session_id() === '' )
       session_start();
     if (isset($_GET["logout"]))
       unset($_SESSION["username"]);
     if (isset($_POST["username"])) {
       session_start();
-      require_once('/xampp/htdocs/LTW/conn.php');
       require_once('/xampp/htdocs/LTW/func.php');
       $username = $_POST['username'];
       $password = $_POST['password'];
@@ -14,6 +15,7 @@
       if(isset($result) && password_verify($password, $result['matKhau'])) {
           $_SESSION["username"] = $_POST["username"];
           $_SESSION["tenBandoc"] = $result["tenBandoc"];
+          $_SESSION["maBandoc"] = $result["maBandoc"];
           header("Location: index.php?page=dssach");
           exit();
         } else {

@@ -24,11 +24,11 @@
             // Kiểm tra xem người dùng đã đăng nhập chưa
             if (isset($_SESSION['username'])) {
                 // Người dùng đã đăng nhập
-                echo '<li id ="login_left"><p>Xin chào ' . $_SESSION['tenBandoc'] . '<p></li>';
+                echo '<li class ="login_left"><p>Xin chào ' . $_SESSION['tenBandoc'] . '<p></li>';
                 echo '<li><a href="login.php?logout=1">Đăng xuất</a></li>';
             } else {
                 // Người dùng chưa đăng nhập, hiển thị thẻ a dẫn đến form đăng nhập
-                echo '<li><a href="login.php">Đăng nhập</a></li>';
+                echo '<li class ="login_left"><a href="login.php">Đăng nhập</a></li>';
             }
             ?>
 
@@ -64,15 +64,12 @@
                 case 'dssach':
                     require("pages/dssach.php");
                     break;
-                case 'dssachcate':
-                    require("pages/dssachcate.php");
-                    break;
                 case 'dkmuonsach':
                     require("pages/dkmuonsach.php");
                     break;
                 case 'brw_list':
                     require("pages/brw_list.php");
-                    break;   
+                    break;  
                }
             }
         ?>

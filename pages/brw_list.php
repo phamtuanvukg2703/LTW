@@ -1,10 +1,18 @@
 <div id = 'brw_list'>
     <h2>Danh sách đang mượn</h2>
     <?php
-    require_once('/xampp/htdocs/LTW/conn.php');
-    $sql = 'SELECT muon.ID, muon.maSach,sach.tenSach,muon.ngayMuon,muon.ngayTradukien
+    require_once('/xampp/htdocs/LTW/func.php');
+    $conn = connectDB();
+    if (!isset($_SESSION['username'])) {
+        header("Location: login.php");
+        exit();
+    }
+    $bandoc = $_SESSION['maBandoc'];
+    $sql = "SELECT muon.ID, muon.maSach,sach.tenSach,muon.ngayMuon,muon.ngayTradukien
     FROM muon , sach
-    where muon.maSach = sach.maSach';
+    where muon.maSach = sach.maSach
+    and muon.ngayDatra = 0
+    and muon.maBandoc = $bandoc";
     $result = mysqli_query($conn,$sql);
     $data = [];
     while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
