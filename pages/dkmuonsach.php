@@ -1,6 +1,6 @@
 <div id ='dkmuonsach'>
     <form method="post">
-        <h2>Đăng ký mượn sách</h2>
+        <h2>Đăng ký mượn gái</h2>
         <input type="hidden" name="maBandoc" value="<?php if(isset($_SESSION['maBandoc'])) {echo $_SESSION['maBandoc'];}?>">
         <label for="maSach">Mã Sách:</label>
         <input type="text" id="maSach" name="maSach" placeholder="Nhập mã sách" required>
