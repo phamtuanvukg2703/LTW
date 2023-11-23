@@ -21,7 +21,7 @@ $conn = connectDB();
 
 if(isset($_GET['search'])) {
     $search = $_GET['search'];
-    $sql = "SELECT * FROM sach WHERE tenSach LIKE '%$search%'";
+    $sql = "SELECT * FROM sach WHERE tenSach LIKE '%$search%' and trangthai = '1'";
     $result = mysqli_query($conn, $sql);
 }
 ?>
