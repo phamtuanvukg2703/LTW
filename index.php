@@ -42,12 +42,12 @@
                 <li>
                     <a href="#">Sách theo thể loại</a>
                         <div class = "item_cate">
-                            <a href="pages/dssachcate.php?theloai=Tâm lý học">Tâm lý học</a>
-                            <a href="pages/dssachcate.php?theloai=Khoa học lịch sử">Khoa học lịch sử</a>
-                            <a href="pages/dssachcate.php?theloai=Khoa học viễn tưởng">Khoa học viễn tưởng</a>
-                            <a href="pages/dssachcate.php?theloai=Fantasy">Fantasy</a>
-                            <a href="pages/dssachcate.php?theloai=Khoa học">Khoa học</a>
-                            <a href="pages/dssachcate.php?theloai=Văn học viễn tưởng hài hước">Văn học viễn tưởng hài hước</a>
+                            <a href="?page=dssachcate&theloai=Tâm lý học">Tâm lý học</a>
+                            <a href="?page=dssachcate&theloai=Khoa học lịch sử">Khoa học lịch sử</a>
+                            <a href="?page=dssachcate&theloai=Khoa học viễn tưởng">Khoa học viễn tưởng</a>
+                            <a href="?page=dssachcate&theloai=Fantasy">Fantasy</a>
+                            <a href="?page=dssachcate&theloai=Khoa học">Khoa học</a>
+                            <a href="?page=dssachcate&theloai=Văn học viễn tưởng hài hước">Văn học viễn tưởng hài hước</a>
                         </div>
                 </li>
                 <li><a href="?page=dkmuonsach">Đăng ký yêu cầu mượn sách</a></li>
@@ -63,6 +63,9 @@
                     break;
                 case 'dssach':
                     require("pages/dssach.php");
+                    break;
+                case 'dssachcate':
+                    require("pages/dssachcate.php");
                     break;
                 case 'dkmuonsach':
                     require("pages/dkmuonsach.php");

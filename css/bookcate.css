@@ -7,21 +7,6 @@ body{
     font-family: sans-serif;
     background-color: #fff1f2;
 }
-#header  > ul{
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    background:#006241;
-    position: sticky;
-    border: #ccc 5px solid;
-    align-items: center;
-    border-radius: 10px;
-}
-#header ul li a{
-    text-decoration: none;
-    color: white;
-    font-size: 1.5em;
-}
 #main {
     width: 80%;
 }

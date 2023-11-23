@@ -1,7 +1,7 @@
 <?php
     require_once('/xampp/htdocs/LTW/func.php');
     $conn = connectDB();
-    $theloai = isset($_GET['theloai']) ? $_GET['theloai'] : 0;
+    $theloai = isset($_GET['theloai']) ? $_GET['theloai'] : "";
     $sach_theo_theloai = array();
     $result = getCate($conn, $theloai); 
     $conn->close();
@@ -16,14 +16,6 @@
     <link rel="stylesheet" href="../css/bookcate.css">
 </head>
 <body>
-    <div id = 'header'>
-        <ul>    
-            <a href="javascript:history.back()">< Quay lại</a>
-            <script>bac</script>
-            <li><a href="../index.php">THƯ VIỆN ONLINE</a></li>
-        </ul>
-    </div>
-    <h3 class = 'title'>Sách theo thể loại tìm kiếm:</h3> <br>
     <div id = 'main'>
         <?php
             if ($result->num_rows > 0) {
