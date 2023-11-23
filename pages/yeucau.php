@@ -10,11 +10,7 @@
     $bandoc = $_SESSION['maBandoc'];
     $sql = "SELECT *
     FROM yeucau, sach
-<<<<<<< HEAD
     where yeucau.maSach = sach.maSach and yeucau.maBandoc = $bandoc and yeucau.trangthai = 1 and sach.trangThai = 1";
-=======
-    where yeucau.maSach = sach.maSach and sach.trangthai = '1' and yeucau.maBandoc = $bandoc and sach.trangthai = '1'";
->>>>>>> 323829f4dee7555b602e321a79870e5bd63d5a6e
     $result = mysqli_query($conn,$sql);
     $data = [];
     while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {

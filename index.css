@@ -10,14 +10,14 @@ body{
 #header .login_left {
     color: white;
     margin-left: auto;
-    margin-right: 10px;
+    margin-right: 5px;
 }
 #search{
     margin: 0 270px;
 }
 #header  > ul{
     display: flex;
-    padding: 20px;
+    padding: 25px 5px;
     background:#006241;
     position: sticky;
     border: #ccc 5px solid;
