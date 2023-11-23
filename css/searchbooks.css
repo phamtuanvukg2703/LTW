@@ -3,6 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    font-family: sans-serif;
+    background-color: #fff1f2;
+}
 #header  > ul{
     display: flex;
     justify-content: space-between;
@@ -34,6 +38,7 @@
     padding: 10px;
     border-radius: 5px;
     width: 250px;
+    background-color: white;
 }
 #main h2{
     text-align: center;
