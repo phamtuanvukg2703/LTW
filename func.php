@@ -14,7 +14,7 @@
     }
 // lấy sách
     function getBook($conn) {
-        $sql = "select * from sach";
+        $sql = "select * from sach where trangthai = '1'";
         return mysqli_query($conn , $sql);
     }
 // lấy chi tiết sách theo id (mã sách)
@@ -24,12 +24,12 @@
     }
 // lấy danh sách theo thể loại ()
     function getCate($conn , $theloai) {
-        $sql = "select * from sach where theLoai LIKE '$theloai'";
+        $sql = "select * from sach where theLoai LIKE '$theloai' AND trangthai = '1'";
         return mysqli_query($conn, $sql);
     }
 // lấy password thôi nèo
     function getpassuser_sdt($conn, $dt){
-        $sql = "SELECT * FROM bandoc WHERE dt = '$dt' or email ='$dt'";
+        $sql = "SELECT * FROM bandoc WHERE dt = '$dt' or email ='$dt' trangthai ='1'";
         $result = null;
         if($sql_result=mysqli_query($conn,$sql)){
             if($row = mysqli_fetch_array($sql_result)) {
