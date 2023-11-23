@@ -10,7 +10,7 @@ body{
 #header .login_left {
     color: white;
     margin-left: auto;
-    margin-right: 15px;
+    margin-right: 10px;
 }
 #search{
     margin: 0 270px;
@@ -158,22 +158,22 @@ li:hover > .item_cate {
 #main #dkmuonsach h2 {
     margin-bottom: 10px;
 }
-#main #brw_list .table {
+#main .table {
     width: 1000px;
     margin: 0 auto;
 }
-#main #brw_list .table td {
+#main .table td {
     background-color: white;
     height: 40px;
     text-align: center;
     padding-top: 10px;
 }
-#main #brw_list th {
+#main th {
     background-color: #d1d5db;
     border-bottom: 1px solid;
     height: 50px;
 }
-#main #brw_list h2 {
+#main h2 {
     text-align: center;
     margin: 0 auto;
     margin-bottom: 10px;

@@ -4,10 +4,8 @@
         <input type="hidden" name="maBandoc" value="<?php if(isset($_SESSION['maBandoc'])) {echo $_SESSION['maBandoc'];}?>">
         <label for="maSach">Mã Sách:</label>
         <input type="text" id="maSach" name="maSach" placeholder="Nhập mã sách" required>
-        <label for="ngayMuon">Ngày Mượn:</label>
-        <input type="date" id="ngaymuon" name="ngaymuon" required>
-        <label for="ngaytra">Ngày Trả:</label>
-        <input type="date" id="ngaytra" name="ngaytra" required>
+        <label for="ngayMuon">Hạn nhận sách:</label>
+        <input type="date" id="hanNhansach" name="hanNhansach" required>
         <button type="submit" class="btn_dk" name ="btn_dkms">Mượn Sách</button>
     </form>
 </div>
@@ -19,20 +17,28 @@
     }
     $conn = connectDB();
     if (isset($_POST['btn_dkms'])){
-        $maBandoc = $_SESSION['maBandoc'];
+        $mabandoc = $_SESSION['maBandoc'];
         $masach = $_POST['maSach'];
-        $ngaymuon =  $_POST['ngaymuon'];
-        $ngaytra = $_POST['ngaytra'];
-        $ngayDatra = 0;
-        $sql = "INSERT INTO muon(maBandoc,maSach,ngayMuon,ngayTradukien,ngayDatra) VALUES ($maBandoc,'$masach','$ngaymuon', '$ngaytra', '$ngayDatra')";
-        if ($conn->query($sql) === TRUE){
-                echo '<script type="text/javascript">';
-                echo 'alert("Đẫ gửi yêu cầu");';
-                echo 'window.location.href = "index.php?page=dkmuonsach";'; 
-                echo '</script>';
-        } else {
-            echo "Lỗi: " . $sql . "<br>" . $conn->error;
-        }    
-    }
+        $hannhansach = $_POST['hanNhansach'];
+        $check = "SELECT maSach from yeucau where maSach = $masach";
+        $result = mysqli_query($conn, $check);
+        if(mysqli_num_rows($result)){
+            echo '<script type="text/javascript">';
+            echo 'alert("Sách này đã có người mượn");';
+            echo 'window.location.href = "index.php?page=dkmuonsach";'; 
+            echo '</script>';
+        }
+        else{
+            $sql = "INSERT INTO yeucau(maBandoc,maSach,hanNhansach) VALUES ($mabandoc,'$masach','$hanNhansach')";
+            if ($conn->query($sql) === TRUE){
+                    echo '<script type="text/javascript">';
+                    echo 'alert("Đã gửi yêu cầu");';
+                    echo 'window.location.href = "index.php?page=dkmuonsach";'; 
+                    echo '</script>';
+            } else {
+                echo "Lỗi: " . $sql . "<br>" . $conn->error;
+            }    
+        }
+        }
     $conn->close();
 ?>

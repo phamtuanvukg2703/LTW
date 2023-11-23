@@ -52,6 +52,7 @@
                         </div>
                 </li>
                 <li><a href="?page=dkmuonsach">Đăng ký yêu cầu mượn sách</a></li>
+                <li><a href="?page=yeucau">Danh sách đã yêu cầu</a></li>
                 <li><a href="?page=brw_list">Danh sách đang mượn</a></li>
             </ul> 
         </div>
@@ -67,6 +68,9 @@
                     break;
                 case 'dkmuonsach':
                     require("pages/dkmuonsach.php");
+                    break;
+                case 'yeucau':
+                    require("pages/yeucau.php");
                     break;
                 case 'brw_list':
                     require("pages/brw_list.php");
