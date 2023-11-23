@@ -23,7 +23,7 @@ $r = mysqli_fetch_array($s);
         </ul>
     </div>
     <div id = 'main'>
-        <div class = 'img'><img src="../img/"></div>
+        <div class = 'img'><?php echo "<img src='../img/{$r['hinh']}'>"?></div>
         <div class= 'info'>
             <div class = 'name'><h2><?php echo $r['tenSach'] ?></h2></div>
             <div class = 'id'>Mã sách: <?php echo $r['maSach'] ?> </div>
