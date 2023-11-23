@@ -1,5 +1,5 @@
 <?php
-    require_once('/xampp/htdocs/LTW/func.php');
+    require_once('func.php');
     $conn = connectDB();
     $theloai = isset($_GET['theloai']) ? $_GET['theloai'] : "";
     $sach_theo_theloai = array();

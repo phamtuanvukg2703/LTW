@@ -1,5 +1,5 @@
 <?php 
-    require_once('/xampp/htdocs/LTW/func.php');
+    require_once('func.php');
     $conn = connectDB();
     if(session_id() === '' )
       session_start();

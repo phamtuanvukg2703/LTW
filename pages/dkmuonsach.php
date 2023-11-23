@@ -12,7 +12,7 @@
     </form>
 </div>
 <?php
-    require_once('/xampp/htdocs/LTW/func.php');
+    require_once('func.php');
     if (!isset($_SESSION['username'])) {
         header("Location: login.php");
         exit();

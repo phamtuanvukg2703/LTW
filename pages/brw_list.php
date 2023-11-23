@@ -1,7 +1,7 @@
 <div id = 'brw_list'>
     <h2>Danh sách đang mượn</h2>
     <?php
-    require_once('/xampp/htdocs/LTW/func.php');
+    require_once('func.php');
     $conn = connectDB();
     if (!isset($_SESSION['username'])) {
         header("Location: login.php");
