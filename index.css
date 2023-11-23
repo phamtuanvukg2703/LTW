@@ -10,6 +10,7 @@ body{
 #header .login_left {
     color: white;
     margin-left: auto;
+    margin-right: 15px;
 }
 #search{
     margin: 0 270px;

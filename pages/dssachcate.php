@@ -13,7 +13,7 @@
                 while ($r = $result->fetch_assoc()) {
                     ?>
                     <ul class = "list-book">
-                        <a href="sachdetail.php?ids=<?php echo $r['maSach']; ?>">
+                        <a href="pages/sachdetail.php?ids=<?php echo $r['maSach']; ?>">
                         <li><img src="#"></li>
                         <li><h2><?php echo $r['tenSach'] ?></h2></li>
                         <li>tác giả: <?php echo $r['tacGia'] ?></li>

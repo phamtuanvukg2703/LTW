@@ -1,5 +1,5 @@
 <?php
-require_once('func.php');
+require_once('../func.php');
 $conn = connectDB();
 $id = $_GET['ids'];
 $s = getCTS($conn,$id);
