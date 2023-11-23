@@ -7,7 +7,7 @@
       unset($_SESSION["username"]);
     if (isset($_POST["username"])) {
       session_start();
-      require_once('/xampp/htdocs/LTW/func.php');
+    //   require_once('func.php');
       $username = $_POST['username'];
       $password = $_POST['password'];
       $result = getpassuser_sdt($conn,$username);
