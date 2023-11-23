@@ -20,7 +20,7 @@
         $mabandoc = $_SESSION['maBandoc'];
         $masach = $_POST['maSach'];
         $hannhansach = $_POST['hanNhansach'];
-        $check = "SELECT maSach from yeucau where maSach = $masach";
+        $check = "SELECT maSach FROM sach WHERE maSach IN (SELECT DISTINCT maSach FROM yeucau WHERE maSach = '$masach' AND hanNhansach >= CURRENT_DATE() AND trangThai = true) OR maSach IN (SELECT DISTINCT maSach FROM muon WHERE maSach = '$masach' AND ngayDatra IS NULL);";
         $result = mysqli_query($conn, $check);
         if(mysqli_num_rows($result)){
             echo '<script type="text/javascript">';
