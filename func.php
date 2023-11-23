@@ -29,7 +29,7 @@
     }
 // lấy password thôi nèo
     function getpassuser_sdt($conn, $dt){
-        $sql = "SELECT * FROM bandoc WHERE dt = '$dt' or email ='$dt' and trangthai ='1'";
+        $sql = "SELECT * FROM bandoc WHERE dt = '$dt' and trangthai ='1' or email ='$dt' and trangthai ='1'";
         $result = null;
         if($sql_result=mysqli_query($conn,$sql)){
             if($row = mysqli_fetch_array($sql_result)) {
