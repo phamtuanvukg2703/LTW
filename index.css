@@ -10,10 +10,10 @@ body{
 #header .login_left {
     color: white;
     margin-left: auto;
-    margin-right: 5px;
+    margin-right: 10px;
 }
 #search{
-    margin: 0 270px;
+    margin: 0 250px;
 }
 #header  > ul{
     display: flex;
