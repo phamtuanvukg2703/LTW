@@ -14,7 +14,7 @@
                     ?>
                     <ul class = "list-book">
                         <a href="pages/sachdetail.php?ids=<?php echo $r['maSach']; ?>">
-                        <li><img src="#"></li>
+                        <li><img src="img/<?php echo $r['hinh']?>"></li>
                         <li><h2><?php echo $r['tenSach'] ?></h2></li>
                         <li>tác giả: <?php echo $r['tacGia'] ?></li>
                         <li>Thể loại: <?php echo $r['theLoai'] ?></li>
@@ -24,7 +24,6 @@
                     </ul>
                 <?php }
             } else {
-                echo '<p>Không có sách trong thể loại này.</p>';
             }
         ?>
     </div>

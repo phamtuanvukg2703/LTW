@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="dssach.css">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/bookcate.css">
+    <link rel="stylesheet" href="../css/searchbooks.css">
 </head>
 <body>
     <div id = 'header'>
@@ -34,7 +34,7 @@ if(isset($_GET['search'])) {
                 ?>
                 <ul class = "list-book">
                     <a href="sachdetail.php?ids=<?php echo $r['maSach']; ?>">
-                    <li><img src="#"></li>
+                    <li><img src="../img/<?php echo $r['hinh']?>"></li>
                     <li><h2><?php echo $r['tenSach'] ?></h2></li>
                     <li>tác giả: <?php echo $r['tacGia'] ?></li>
                     <li>Thể loại: <?php echo $r['theLoai'] ?></li>
