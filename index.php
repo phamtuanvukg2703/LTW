@@ -57,14 +57,11 @@
         </div>
         <div id="main">
         <?php
-        if (isset($_GET["page"])){
-            switch ($_GET["page"]) {
-                default:
-                    require('pages/sachhot.php');
-                    break;
+         $page = isset($_GET["page"]) ? $_GET["page"] : "";
+         switch ($page) {
                 case 'dssach':
-                    require("pages/dssach.php");
-                    break;
+                    default:
+                        require("pages/dssach.php");
                 case 'dssachcate':
                     require("pages/dssachcate.php");
                     break;
@@ -73,9 +70,8 @@
                     break;
                 case 'brw_list':
                     require("pages/brw_list.php");
-                    break;  
-               }
-            }
+                    break;
+               };
         ?>
     </div>
         </div>

@@ -14,7 +14,7 @@
           $_SESSION["username"] = $_POST["username"];
           $_SESSION["tenBandoc"] = $result["tenBandoc"];
           $_SESSION["maBandoc"] = $result["maBandoc"];
-          header("Location: index.php?page=dssach");
+          header("Location: index.php");
           exit();
         } else {
             echo '<script type="text/javascript">';
