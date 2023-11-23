@@ -1,4 +1,4 @@
-<div>
+<div id ='allbooks'>
     <?php
     require_once('func.php');
     $conn = connectDB();
