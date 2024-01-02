@@ -48,7 +48,7 @@
                 <button type="submit" class ="btn_dn">Đăng nhập</button>
             </div>
             <div class ="">Đăng nhập với tài khoản 
-                <a href="">Thủ Thư</a>
+                <a href="../DoanWeb/">Thủ Thư</a>
             </div>
         </form>
     </div>
